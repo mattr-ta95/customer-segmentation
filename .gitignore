@@ -15,9 +15,11 @@ env/
 dist/
 build/
 
-# Results
-results/
-*.png
+# Results (keep directory structure, ignore output files)
+results/*.csv
+results/*.png
+results/*.jpg
+results/*.jpeg
 
 # IDE
 .DS_Store
