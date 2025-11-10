@@ -1,0 +1,39 @@
+# Customer Segmentation Configuration File
+# Override default settings by editing this file
+
+# Data paths
+data:
+  input_path: "data/CUSTOMERS_CLEAN.csv"
+  output_dir: "results"
+
+# Random seed for reproducibility
+random_state: 42
+
+# Outlier detection parameters
+outlier_detection:
+  contamination: 0.05  # Expected proportion of outliers (0.0 to 0.5)
+  n_estimators: 100    # Number of trees in Isolation Forest
+
+# Clustering parameters
+clustering:
+  min_clusters: 2
+  max_clusters: 8
+  optimal_k: null  # Set to a specific number to override automatic detection, or null for auto
+  kmeans_n_init: 10
+
+# Sampling parameters (for large datasets)
+sampling:
+  dendrogram_max_samples: 5000
+  dendrogram_sample_frac: 0.3
+  tsne_max_samples: 5000
+  tsne_sample_frac: 0.2
+  tsne_default_perplexity: 30
+
+# Visualization parameters
+visualization:
+  dpi: 300
+  interactive: true  # Set to false to run in batch mode
+
+# Logging
+logging:
+  verbose: false  # Set to true for debug-level logging
